@@ -1,42 +1,42 @@
 [
   {
-    "nome": "Tesouro Selic",
-    "categoria": "renda_fixa",
+    "nome": "PGBL Renda Fixa Conservador",
+    "categoria": "previdencia_privada",
     "risco": "baixo",
-    "rentabilidade": "100% da Selic",
-    "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
-  },
-  {
-    "nome": "CDB Liquidez Diária",
-    "categoria": "renda_fixa",
-    "risco": "baixo",
-    "rentabilidade": "102% do CDI",
+    "rentabilidade": "Atrelada ao CDI",
     "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "indicado_para": "Quem declara IR no modelo completo e busca acumulação de longo prazo"
   },
   {
-    "nome": "LCI/LCA",
-    "categoria": "renda_fixa",
+    "nome": "VGBL Renda Fixa",
+    "categoria": "previdencia_privada",
     "risco": "baixo",
-    "rentabilidade": "95% do CDI",
-    "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "rentabilidade": "CDI + rendimento da carteira",
+    "aporte_minimo": 50.00,
+    "indicado_para": "Quem declara IR simplificado e busca planejamento sucessório"
   },
   {
-    "nome": "Fundo Multimercado",
-    "categoria": "fundo",
+    "nome": "PGBL Multimercado",
+    "categoria": "previdencia_privada",
     "risco": "medio",
-    "rentabilidade": "CDI + 2%",
-    "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "rentabilidade": "Objetivo de superar o CDI no longo prazo",
+    "aporte_minimo": 200.00,
+    "indicado_para": "Investidores com perfil moderado que aceitam oscilações"
   },
   {
-    "nome": "Fundo de Ações",
-    "categoria": "fundo",
+    "nome": "VGBL Balanceado",
+    "categoria": "previdencia_privada",
+    "risco": "medio",
+    "rentabilidade": "Carteira diversificada entre renda fixa e variável",
+    "aporte_minimo": 100.00,
+    "indicado_para": "Quem busca equilíbrio entre risco e potencial de retorno"
+  },
+  {
+    "nome": "PGBL Ações",
+    "categoria": "previdencia_privada",
     "risco": "alto",
     "rentabilidade": "Variável",
-    "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "aporte_minimo": 200.00,
+    "indicado_para": "Perfil arrojado com horizonte de investimento de longo prazo"
   }
 ]
