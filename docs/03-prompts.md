@@ -83,5 +83,4 @@ REGRAS:
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- [Observação 1]
-- [Observação 2]
+Fiz o ajuste no qual o Doutor Finanças será exclusivo para assuntos relacionados a Previdência Privada
