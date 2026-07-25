@@ -116,11 +116,6 @@ def perguntar(pergunta: str) -> str:
     prompt = f"""
 {SYSTEM_PROMPT}
 
-==============================
-CONTEXTO DO CLIENTE
-==============================
-
-{contexto}
 
 ==============================
 PERGUNTA DO CLIENTE
