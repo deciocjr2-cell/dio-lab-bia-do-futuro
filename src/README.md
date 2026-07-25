@@ -1,51 +1,13 @@
 # Código da Aplicação
 
-Esta pasta contém o código do seu agente financeiro.
-
-## Estrutura Sugerida
-
-```
-src/
-├── projeto.py              # Aplicação principal (Streamlit/Gradio)
-├── agente.py           # Lógica do agente
-├── config.py           # Configurações (API keys, etc.)
-└── requirements.txt    # Dependências
-```
-
-## Exemplo de requirements.txt
-
-```
-streamlit
-openai
-python-dotenv
-```
-
-## Como Rodar
-
-```bash
-# Instalar dependências
-pip install -r requirements.txt
-
-# Rodar a aplicação
-streamlit run app.py
-```
-## Exemplo de Contexto Montado
-
 import json
 import requests
 import pandas as pd
 import streamlit as st
 
-# ==========================
-# CONFIGURAÇÕES
-# ==========================
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
 MODELO = "gpt-oss"   # Altere para o nome do modelo instalado, se necessário
-
-# ==========================
-# CARREGAMENTO DOS DADOS
-# ==========================
 
 try:
     with open("./bases/perfil_investidor.json", encoding="utf-8") as f:
@@ -60,10 +22,6 @@ try:
 except Exception as e:
     st.error(f"Erro ao carregar os arquivos: {e}")
     st.stop()
-
-# ==========================
-# CONTEXTO DO CLIENTE
-# ==========================
 
 contexto = f"""
 CLIENTE
@@ -87,11 +45,6 @@ HISTÓRICO DE ATENDIMENTOS
 PRODUTOS DISPONÍVEIS
 {json.dumps(produtos, indent=2, ensure_ascii=False)}
 """
-
-# ==========================
-# PROMPT DO SISTEMA
-# ==========================
-
 SYSTEM_PROMPT = """
 Você é o Doutor Finanças, especialista em Previdência Privada.
 
@@ -107,19 +60,11 @@ Regras:
 - Utilize linguagem simples.
 """
 
-# ==========================
-# FUNÇÃO DE CONSULTA AO OLLAMA
-# ==========================
-
 def perguntar(pergunta: str) -> str:
 
     prompt = f"""
 {SYSTEM_PROMPT}
 
-
-==============================
-PERGUNTA DO CLIENTE
-==============================
 
 {pergunta}
 """
@@ -157,9 +102,6 @@ PERGUNTA DO CLIENTE
     except Exception as e:
         return f"Ocorreu um erro: {e}"
 
-# ==========================
-# INTERFACE STREAMLIT
-# ==========================
 
 st.set_page_config(
     page_title="Doutor Finanças",
