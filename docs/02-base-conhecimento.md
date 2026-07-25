@@ -38,6 +38,10 @@ Serão consultados dinamicamente
 
 import pandas as pd
 import json
+import requests
+
+OLLAMA_URL = "http://localhost:11434/api/generate"
+MODELO = "gpt-oss"
 
 perfil = json.load(open('./bases/perfil_investidor.json'))
 transacoes = pd.read_csv('./bases/transacoes.csv')
@@ -67,5 +71,19 @@ REGRAS:
 
 Sempre baseie suas respostas nos dados fornecidos
 Nunca invente informações financeiras
+Se não souber algo, admita e ofereça alternativas
+"""
+
+def perguntar(msg):
+    prompt = f"""
+{SYSTEM_PROMPT}
+
+CONTEXTO DO CLIENTE:
+{contexto}
+
+Pergunta: {msg}"""
+
+r = requests.post(OLLAMA_URL,json={"model":MODELO, "prompt": prompt, "stream":False})
+return r.json()['response']
 Se não souber algo, admita e ofereça alternativas
 """
