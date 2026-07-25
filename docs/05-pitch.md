@@ -41,4 +41,6 @@ A solução é mostrar de forma simples como escolher seus ativos de Previdênci
 
 > Cole aqui o link do seu pitch (YouTube, Loom, Google Drive, etc.)
 
-[Link do vídeo]
+(https://github.com/deciocjr2-cell/dio-lab-bia-do-futuro/blob/main/WhatsApp%20Video%202026-07-24%20at%2023.15.26.mp4)
+
+
