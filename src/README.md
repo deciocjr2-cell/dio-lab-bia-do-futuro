@@ -6,7 +6,7 @@ Esta pasta contém o código do seu agente financeiro.
 
 ```
 src/
-├── app.py              # Aplicação principal (Streamlit/Gradio)
+├── projeto.py              # Aplicação principal (Streamlit/Gradio)
 ├── agente.py           # Lógica do agente
 ├── config.py           # Configurações (API keys, etc.)
 └── requirements.txt    # Dependências
@@ -29,3 +29,5 @@ pip install -r requirements.txt
 # Rodar a aplicação
 streamlit run app.py
 ```
+
+
